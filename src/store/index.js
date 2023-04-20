@@ -13,6 +13,10 @@ export default createStore({
     },
   },
   actions: {
+    cerrarSesion({commit}){
+      localStorage.removeItem('token')
+      commit('setToken',null)
+    },
     /* esto es para que cuando refresquemos busque obtener el token del local storage y lo llamamos desde la pagina padre en este caso app.vue*/
     obtenerToken({ commit }){
       if (localStorage.getItem('token')) {

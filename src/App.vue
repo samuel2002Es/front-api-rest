@@ -16,7 +16,7 @@
       <v-spacer></v-spacer>
 
       <v-btn icon>
-        <v-icon>mdi-export</v-icon>
+        <v-icon @click="cerrarSesion">mdi-export</v-icon>
       </v-btn>
     </v-toolbar>
     <v-navigation-drawer
@@ -87,6 +87,10 @@
 </template>
 
 <script>
+//IMPORTANTE
+//si se quiere llevar a produccion para que lea el histori y no haya errores debes installar
+//npm i connect-history-api-fallback esto en el backend,
+/* luego se hace un npm buld de la applicacion con vue y los archivos de dist se pegan en la carpeta public del backend, posterior a esto se publica */
 import {mapActions} from 'vuex'
 export default {
   name: 'App',
@@ -106,7 +110,7 @@ export default {
       ],
   }),
   methods:{
-    ...mapActions(['obtenerToken']),
+    ...mapActions(['obtenerToken','cerrarSesion']),
   },
   created(){
     this.obtenerToken()
