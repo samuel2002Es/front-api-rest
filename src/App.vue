@@ -91,6 +91,7 @@
 //si se quiere llevar a produccion para que lea el histori y no haya errores debes installar
 //npm i connect-history-api-fallback esto en el backend,
 /* luego se hace un npm buld de la applicacion con vue y los archivos de dist se pegan en la carpeta public del backend, posterior a esto se publica */
+/* https://www.youtube.com/watch?v=QUZrjnprVQU&list=PLPl81lqbj-4J-gfAERGDCdOQtVgRhSvIT&index=58 */
 import {mapActions} from 'vuex'
 export default {
   name: 'App',
