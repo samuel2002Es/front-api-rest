@@ -25,8 +25,8 @@ export default {
   data(){
     return{
       usuario:{
-        email: '',
-        password: '',
+        email: 'samuel@gmail.com',
+        password: '1234567',
       }
     }
   },
